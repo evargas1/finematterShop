@@ -62,8 +62,14 @@
                     <div class="number-item">
                         001
                     </div>
-                    <img src="{{product.imgae.url}}" 
-                    width="100%" alt="">
+
+
+                    {% if product.imgae.url %}
+                    <img src="{{ product.imgae.url }}" width="100%" alt="">
+                    {% else %}
+                    <img src="{% static './img/boots-1.png' %}" alt="">
+                    {% endif %}
+
 
                     <div class="item">{{product.name}}</div>
                     <div class="designer">by Miles Carton</div>
