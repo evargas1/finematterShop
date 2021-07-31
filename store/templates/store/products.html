@@ -58,9 +58,10 @@
     
                 <div class="right-nav sm-3">
                     <ul>
-                        <li><a href=""{% url 'store' %}"">Search</a></li>
+                        <li><a href="{% url 'store' %}">Search</a></li>
                         <li><a href="{% url 'checkout' %}">Wishlist</a></li>
-                        <li class="cart-icon"><a href=""{% url 'cart' %}""><img src="{% static 'img/cart.png' %}" alt=""></a></li>
+                        <li class="cart-icon"><a href="{% url 'cart' %}"><img src="{% static 'img/cart.png' %}" alt=""></a></li>
+                        <li><h5 id="cart-total">{{cartItems}}</h5></li>
                     </ul>
                 </div>
             </div>
