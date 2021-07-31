@@ -57,12 +57,12 @@
             <!-- <div class="row-pre"></div> -->
             {% if first_row %}
             <div class="row">
-            {% for product in first_row %}
+            {% for product in products %}
                 <div class="col-4">
                     <div class="number-item">
                         001
                     </div>
-                    <img src="{{ product.url }}" 
+                    <img src="{{ product.imgae.url }}" 
                     width="100%" alt="">
 
                     {% comment %} thta is why we call the url configuration because we condigured it properly and saved {% endcomment %}
