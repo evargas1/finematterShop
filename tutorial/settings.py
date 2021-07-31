@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'store',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +123,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = '/tutorial/site/public/static'
 
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/tutorial/site/public/media'
+
+FILE_UPLOAD_PERMISSIONS = 0o644
 
 
 # Default primary key field type
