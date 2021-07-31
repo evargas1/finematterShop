@@ -57,7 +57,7 @@
             <!-- <div class="row-pre"></div> -->
             {% if first_row %}
             <div class="row">
-            {% for product in products %}
+            {% for product in first_row %}
                 <div class="col-4">
                     <div class="number-item">
                         001
@@ -65,7 +65,6 @@
                     <img src="{{ product.imgae.url }}" 
                     width="100%" alt="">
 
-                    {% comment %} thta is why we call the url configuration because we condigured it properly and saved {% endcomment %}
                     <div class="item">{{product.name}}</div>
                     <div class="designer">by Miles Carton</div>
                     
@@ -87,68 +86,7 @@
             {% endif %}
 
 
-            <!-- <div class="row">
-                <div class="col-4">
-                    <div class="number-item">
-                        001
-                    </div>
-                    <img src="{% static './img/rings-1.jpg' %}" width="100%" alt="">
-                    <div class="item">Earrings</div>
-                    <div class="designer">by Miles Carton</div>
-                    
-                    <div class="price">$2,580</div>
-                    
-                    <div class="add">
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-    
-                <div class="col-4">
-                    <div class="number-item">
-                        002
-                    </div>
-                    <img src="{% static './img/rings-2.jpg' %}" width="100%" alt="">
-                    <div class="item">Necklace</div>
-                    <div class="designer"> by Alice Cassius</div>
-                    
-                    <div class="price">$7,875</div>
-                    
-                    <div class="add">
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-    
-                <div class="col-4">
-                    <div class="number-item">
-                        003
-                    </div>
-                    <img src="{% static './img/rings-3.jpg' %}" width="100%" alt="">
-                    <div class="item">Necklace</div>
-                    <div class="designer">by Ophelia Vanbuen</div>
-                    
-                    <div class="price">$12,906</div>
-                    
-                    <div class="add">
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-    
-                <div class="col-4">
-                    <div class="number-item">
-                        004
-                    </div>
-                    <img src="{% static './img/rings-4.jpg' %}" width="100%" alt="">
-                    <div class="item">Earrings</div>
-                    <div class="designer"> by Milo Green</div>
-                    <div class="price">$3,980</div>
-                    
-                    <div class="add">
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-            </div> -->
-
-
+         
 
 
         </div>
