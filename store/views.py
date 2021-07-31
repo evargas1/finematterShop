@@ -76,13 +76,30 @@ def checkout (request):
 
 def products(request):
     products = Product.objects.all()
+
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        # we are either going to create or find a customer
+        items = order.orderitem_set.all()
+        # quering out the item prop that we created in models
+        cartItems = order.get_cart_items
+    else:
+        items = []
+        order = {
+            'get_cart_table':0, 'get_cart_items':0, 'shipping': False 
+        }
+        cartItems = order['get_cart_items']
+   
    
     context = {
         'products':products, 
         'first_row':products[:4],
         'sec_row':products[4:8],
         'thrid_row':products[8:12],
-      
+        'items':items, 
+        'order':order,
+        'cartItems':cartItems
         }
     
     return render(request, 'store/products.html', context)
