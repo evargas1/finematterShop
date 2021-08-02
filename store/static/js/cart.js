@@ -10,12 +10,19 @@ for (i = 0; i < updateBtns.length; i++) {
         console.log('USER: ', user)
 
         if(user === 'AnonymousUser'){
-            console.log('Not logged in')
+            addCookieItem()
         }else{
             console.log('User is logged in, sending data...')
         }
     })
 }
+
+function addCookieItem(productId, action){
+    console.log('User is not authenticated')
+}
+
+
+
 
 function updateUserOrder(productId, action){
     console.log('User is authenticated, sending data...')
