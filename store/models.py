@@ -38,6 +38,18 @@ class Order(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+    @property
+    def get_cart_total(self):
+        orderitems = self.orderitem_set.all()
+        total = sum([item.get_total for item in orderitems])
+        return total
+
+    @property
+    def get_cart_items(self):
+        orderitems = self.orderitem_set.all()
+        total = sum([item.quantity for item in orderitems])
+        return total
     
     
 class OrderItem(models.Model):
@@ -45,6 +57,16 @@ class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
     quantity = models.IntegerField(default=0, null=True, blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
+
+# this will allow us to see the total if we 
+# have more than one item listed
+
+    @property
+    def get_total(self):
+        total = self.product.price * self.quantity
+        # where did this price value come from
+        # oh inheret from Product and the child class is price for it
+        return total
 
 
 class ShippingAddress(models.Model):
