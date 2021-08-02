@@ -9,6 +9,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecom</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <script type="text/javascript">
+        var user = '{{request.user}}'
+        function getToken(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        const csrftoken = getToken('csrftoken');
+        
+    </script>
 </head>
 <body>
 
@@ -22,7 +43,7 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="{% url 'store' %}">Home</a>
                 <a href="{% url 'about' %}">About</a>
-                <a href=""{% url 'store' %}"">Sustainablility</a>
+                <a href="{% url 'store' %}">Sustainablility</a>
     
                 <a href="{% url 'products' %}">Products</a>
                 <a href="{% url 'cart' %}">Cart</a>
