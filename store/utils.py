@@ -2,6 +2,7 @@ import json
 from .models import *
 
 def cookieCart(request):
+    products = Product.objects.all()
     try:
         cart = json.loads(request.COOKIES['cart'])
     except:
