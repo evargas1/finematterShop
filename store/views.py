@@ -16,8 +16,7 @@ def store(request):
     else:
         cookieData = cookieCart(request)
         cartItems = cookieData['cartItems']
-        order = cookieData['order']
-        items = cookieData['items']
+        
 
 
     products = Product.objects.all()
