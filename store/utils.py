@@ -39,4 +39,4 @@ def cookieCart(request):
         except:
             pass
             
-    return {'cartItems':cartItems, 'order':order, 'items':items}
+        return {'cartItems':cartItems, 'order':order, 'items':items}
