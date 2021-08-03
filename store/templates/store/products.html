@@ -127,31 +127,134 @@
         </div>
 
         <div class="container-for-row" style="margin-bottom: 30px;">
-            {% if sec_row %}
-            <!-- <div class="row-pre"></div> -->
             <div class="row">
-                {% for product in sec_row %}
                 <div class="col-4">
                     <div class="number-item">
-                        101
+                        001
                     </div>
-
-                    <img src="{{product.imageURL}}" width="100%" alt="">
-                    <div class="item">{{product.name}}</div>
+                    <img src="{% static './img/pro-1.jpg' %}" width="100%" alt="">
+                    <div class="item">Earrings</div>
                     <div class="designer">by Miles Carton</div>
                     
-                    <div class="price">${{product.price|floatformat:2}}</div>
+                    <div class="price">$2,580</div>
                     
                     <div class="add">
-                        <button data-product={{product.id}} data-action="add" class="update-cart" >Add to Cart</button>
+                        <button>Add to Cart</button>
                     </div>
                 </div>
     
-                
-                {% endfor %}
+                <div class="col-4">
+                    <div class="number-item">
+                        002
+                    </div>
+                    <img src="{% static './img/pro-2.jpg' %}" width="100%" alt="">
+                    <div class="item">Necklace</div>
+                    <div class="designer"> by Alice Cassius</div>
+                    
+                    <div class="price">$7,875</div>
+                    
+                    <div class="add">
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+    
+                <div class="col-4">
+                    <div class="number-item">
+                        003
+                    </div>
+                    <img src="{% static './img/pro-3.jpg' %}" width="100%" alt="">
+                    <div class="item">Necklace</div>
+                    <div class="designer">by Ophelia Vanbuen</div>
+                    
+                    <div class="price">$12,906</div>
+                    
+                    <div class="add">
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+    
+                <div class="col-4">
+                    <div class="number-item">
+                        004
+                    </div>
+                    <img src="{% static './img/pro-4.jpg' %}" width="100%" alt="">
+                    <div class="item">Earrings</div>
+                    <div class="designer"> by Milo Green</div>
+                    <div class="price">$3,980</div>
+                    
+                    <div class="add">
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
             </div>
 
-            {% endif %}
+            <div class="row">
+                <div class="col-4">
+                    <div class="number-item">
+                        001
+                    </div>
+                    <img src="{% static './img/rings-1.jpg' %}" width="100%" alt="">
+                    <div class="item">Earrings</div>
+                    <div class="designer">by Miles Carton</div>
+                    
+                    <div class="price">$2,580</div>
+                    
+                    <div class="add">
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+    
+                <div class="col-4">
+                    <div class="number-item">
+                        002
+                    </div>
+                    <img src="{% static './img/rings-2.jpg' %}" width="100%" alt="">
+                    <div class="item">Necklace</div>
+                    <div class="designer"> by Alice Cassius</div>
+                    
+                    <div class="price">$7,875</div>
+                    
+                    <div class="add">
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+    
+                <div class="col-4">
+                    <div class="number-item">
+                        003
+                    </div>
+                    <img src="{% static './img/rings-3.jpg' %}" width="100%" alt="">
+                    <div class="item">Necklace</div>
+                    <div class="designer">by Ophelia Vanbuen</div>
+                    
+                    <div class="price">$12,906</div>
+                    
+                    <div class="add">
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+    
+                <div class="col-4">
+                    <div class="number-item">
+                        004
+                    </div>
+                    <img src="{% static './img/rings-4.jpg' %}" width="100%" alt="">
+                    <div class="item">Earrings</div>
+                    <div class="designer"> by Milo Green</div>
+                    <div class="price">$3,980</div>
+                    
+                    <div class="add">
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        
+
+         
         
 
 
