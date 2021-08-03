@@ -12,6 +12,7 @@ def cookieCart(request):
         # create an empty total and items amount 
     order = {'get_cart_total':0, 'get_cart_items':0}
     cartItems = order['get_cart_items']
+    items = []
     for i in cart:
         try:
             cartItems += cart[i]['quantity']
