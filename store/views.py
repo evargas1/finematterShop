@@ -19,7 +19,6 @@ def store(request):
         
 
 
-    products = Product.objects.all()
     context = {'products':products, 'cartItems':cartItems, 'shipping':False}
     return render(request, 'store/store.html', context)
 
